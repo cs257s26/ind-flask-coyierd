@@ -43,7 +43,7 @@ def get_max_temp_over_threshold(connection, temp: float) -> list:
     """
     try:
         cursor = connection.cursor()
-        query = "SELECT COUNT(stop_1) FROM '2000';"
+        query = 'SELECT COUNT(stop_1) FROM "2000";'
         cursor.execute(query, (temp,))
         return cursor.fetchall()
 
