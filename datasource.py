@@ -66,7 +66,7 @@ def get_all_bird_sightings_for_year(connection, bird, year) -> list:
     try:
         cursor = connection.cursor()
 
-        query = 'SELECT COALESCE(stop_1, 0) + COALESCE(stop_2, 0) + COALESCE(stop_3, 0) + COALESCE(stop_4, 0) + COALESCE(stop_5, 0) + COALESCE(stop_6, 0) + COALESCE(stop_7, 0) + COALESCE(stop_8, 0) + COALESCE(stop_9, 0) + COALESCE(stop_10, 0) + COALESCE(stop_11, 0) + COALESCE(stop_12, 0) + COALESCE(stop_13, 0) + COALESCE(stop_14, 0) + COALESCE(stop_15, 0) + COALESCE(stop_16, 0) + COALESCE(stop_17, 0) FROM "%s" WHERE bird_name=%s;'
+        query = 'SELECT COALESCE(stop_1, 0) + COALESCE(stop_2, 0) + COALESCE(stop_3, 0) + COALESCE(stop_4, 0) + COALESCE(stop_5, 0) + COALESCE(stop_6, 0) + COALESCE(stop_7, 0) + COALESCE(stop_8, 0) + COALESCE(stop_9, 0) + COALESCE(stop_10, 0) + COALESCE(stop_11, 0) + COALESCE(stop_12, 0) + COALESCE(stop_13, 0) + COALESCE(stop_14, 0) + COALESCE(stop_15, 0) + COALESCE(stop_16, 0) + COALESCE(stop_17, 0) AS total_sightings FROM "%s" WHERE bird_name=%s;'
         cursor.execute(query, (year))
         return cursor.fetchall()
 
@@ -126,5 +126,5 @@ main()
 # SELECT (stop_1 + stop_2 + stop_3 + stop_4 + stop_5 + stop_6 + stop_7 + stop_8 + stop_9 + stop_10 + stop_11 + stop_12 + stop_13 + stop_14 + stop_15 + stop_16 + stop_17) FROM "2017" WHERE bird_name='American Crow (Corvus brachyrhynchos) ';
 # SELECT stop_1 + stop_1 FROM "2017" WHERE bird_name='American Crow (Corvus brachyrhynchos) ';
 
-# SELECT COALESCE(stop_1, 0) + COALESCE(stop_2, 0) + COALESCE(stop_3, 0) + COALESCE(stop_4, 0) + COALESCE(stop_5, 0) + COALESCE(stop_6, 0) + COALESCE(stop_7, 0) + COALESCE(stop_8, 0) + COALESCE(stop_9, 0) + COALESCE(stop_10, 0) + COALESCE(stop_11, 0) + COALESCE(stop_12, 0) + COALESCE(stop_13, 0) + COALESCE(stop_14, 0) + COALESCE(stop_15, 0) + COALESCE(stop_16, 0) + COALESCE(stop_17, 0) FROM "2017" WHERE bird_name='American Crow (Corvus brachyrhynchos) ';
+SELECT COALESCE(stop_1, 0) + COALESCE(stop_2, 0) + COALESCE(stop_3, 0) + COALESCE(stop_4, 0) + COALESCE(stop_5, 0) + COALESCE(stop_6, 0) + COALESCE(stop_7, 0) + COALESCE(stop_8, 0) + COALESCE(stop_9, 0) + COALESCE(stop_10, 0) + COALESCE(stop_11, 0) + COALESCE(stop_12, 0) + COALESCE(stop_13, 0) + COALESCE(stop_14, 0) + COALESCE(stop_15, 0) + COALESCE(stop_16, 0) + COALESCE(stop_17, 0) AS total_sightings FROM "2017" WHERE bird_name='American Crow (Corvus brachyrhynchos) ';
 # 'SELECT COALESCE(stop_1, 0) + COALESCE(stop_2, 0) + COALESCE(stop_3, 0) + COALESCE(stop_4, 0) + COALESCE(stop_5, 0) + COALESCE(stop_6, 0) + COALESCE(stop_7, 0) + COALESCE(stop_8, 0) + COALESCE(stop_9, 0) + COALESCE(stop_10, 0) + COALESCE(stop_11, 0) + COALESCE(stop_12, 0) + COALESCE(stop_13, 0) + COALESCE(stop_14, 0) + COALESCE(stop_15, 0) + COALESCE(stop_16, 0) + COALESCE(stop_17, 0) FROM "%s" WHERE bird_name=%s;'
