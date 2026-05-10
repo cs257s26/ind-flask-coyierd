@@ -48,7 +48,7 @@ def get_sightings_at_stop_for_year(connection, bird, stop, year) -> int:
 
         # query = """SELECT stop_var FROM year;"""
         # cursor.execute(query, (stop_var, year, bird))
-        query = "RAISE NOTICE year;"
+        query = "SELECT year AS message;"
         cursor.execute(query, (year,))
         return cursor.fetchall()
 
