@@ -9,3 +9,7 @@ Two features in the flask app:
 
 I was running python3 app.py to start the app (need to add port in app.run(host="0.0.0.0", port=####) as needed)
 Tests were: python3 -m unittest Tests/test_app.py
+
+Copy commands (one for each table): [0-4], [8-18], [20-25]
+\copy "2000" FROM 'data/csv/2000.csv' DELIMITER ',' CSV
+\copy "2001" FROM 'data/csv/2001.csv' DELIMITER ',' CSV
