@@ -43,8 +43,9 @@ def get_sightings_at_stop_for_year(connection, bird, stop, year) -> list:
     """
     try:
         cursor = connection.cursor()
-        query = "SELECT stop_1 FROM year WHERE bird_name=bird;"
-        cursor.execute(query, (temp,))
+        stop_var = "stop_" + stop
+        query = "SELECT stop_var FROM year WHERE bird_name=bird;"
+        cursor.execute(query, (stop_var,), (year,), (bird,))
         return cursor.fetchall()
 
     except Exception as e:
