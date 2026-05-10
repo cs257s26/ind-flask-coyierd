@@ -64,6 +64,7 @@ def main():
     )
 
     if results is not None:
+        print(results, "***")
         print("Query results: ")
         for item in results:
             print(item)
