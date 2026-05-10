@@ -5,8 +5,8 @@ DECLARE
     c INT;
 BEGIN
     FOR a IN 2020..2025 LOOP
-        DROP TABLE IF EXISTS a::TEXT;
-        CREATE TABLE a::TEXT (
+        DROP TABLE IF EXISTS CAST(a AS TEXT);
+        CREATE TABLE CAST(a AS TEXT) (
         bird_name text,
         stop_1 INT,
         stop_2 INT,
@@ -29,8 +29,8 @@ BEGIN
     END LOOP;
 
     FOR b IN 2008..2018 LOOP
-        DROP TABLE IF EXISTS b::TEXT;
-        CREATE TABLE b::TEXT (
+        DROP TABLE IF EXISTS CAST(b AS TEXT);
+        CREATE TABLE CAST(b AS TEXT) (
         bird_name text,
         stop_1 INT,
         stop_2 INT,
@@ -53,8 +53,8 @@ BEGIN
     END LOOP;
 
     FOR c IN 2000..2004 LOOP
-        DROP TABLE IF EXISTS c::TEXT;
-        CREATE TABLE c::TEXT (
+        DROP TABLE IF EXISTS CAST(c AS TEXT);
+        CREATE TABLE CAST(c AS TEXT) (
         bird_name text,
         stop_1 INT,
         stop_2 INT,
