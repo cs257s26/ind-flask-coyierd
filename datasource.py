@@ -45,7 +45,7 @@ def get_sightings_at_stop_for_year(connection, bird, stop, year) -> int:
         cursor = connection.cursor()
         stop_var = "stop_" + str(stop)
 
-        query = 'SELECT %s FROM "%s" WHERE bird_name=%s;'
+        query = 'SELECT * FROM "%s" WHERE bird_name=%s;'
         cursor.execute(query, (stop_var, year, bird))
         return cursor.fetchall()
 
