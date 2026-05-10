@@ -104,14 +104,15 @@ def main():
     )
 
     print(results)
-    if results is not None:
-        print(results, "***")
-        print("Query results: ")
-        for item in results:
-            print(item)
+    print("*****")
+    # if results is not None:
+    #     print(results, "***")
+    #     print("Query results: ")
+    #     for item in results:
+    #         print(item)
 
-    # Disconnect from database
-    connection.close()
+    # # Disconnect from database
+    # connection.close()
 
 
 main()
