@@ -53,6 +53,28 @@ def get_sightings_at_stop_for_year(connection, bird, stop, year) -> list:
         return None
 
 
+def get_most_popular_stop_for_year(connection, year) -> list:
+    """Returns the amount of birds at a given stop at a given year.
+
+    Args:
+        connection (psycopg2.connection) - the connection to the database
+        temp (float) - the minimum high temperature
+
+    Returns:
+        list - a list of all dates where the high temperature is greater or equal to temp, or None if the query fails.
+    """
+    try:
+        cursor = connection.cursor()
+
+        query = 'SELECT TOP FROM "%s" ORDER BY stop_1 + stop_2 + stop_3 + stop_4 + stop_5 + stop_6 + stop_7 + stop_8 + stop_9 + stop_10 + stop_11 + stop_12 + stop_13 + stop_14 + stop_15 + stop_16 + stop_17;'
+        cursor.execute(query, (year))
+        return [cursor.fetchall()[0][stop]]
+
+    except Exception as e:
+        print("Something went wrong when executing the query: ", e)
+        return None
+
+
 def main():
     # Connect to the database
     connection = connect()
