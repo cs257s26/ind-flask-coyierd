@@ -18,7 +18,6 @@ FOR i in 2020..2025 LOOP
     stop_14 numeric,
     stop_15 numeric,
     stop_16 numeric,
-    stop_16 numeric,
     stop_17 numeric
     );
 END LOOP
@@ -44,7 +43,6 @@ FOR i in 2008..2018 LOOP
     stop_14 numeric,
     stop_15 numeric,
     stop_16 numeric,
-    stop_16 numeric,
     stop_17 numeric
     );
 END LOOP
@@ -69,7 +67,6 @@ FOR i in 2000..2004 LOOP
     stop_13 numeric,
     stop_14 numeric,
     stop_15 numeric,
-    stop_16 numeric,
     stop_16 numeric,
     stop_17 numeric
     );
