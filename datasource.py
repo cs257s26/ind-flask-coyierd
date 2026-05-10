@@ -60,7 +60,7 @@ def main():
 
     # Execute a simple query: how many earthquakes above the specified magnitude are there in the data?
     results = get_sightings_at_stop_for_year(
-        connection, "American Crow (Corvus brachyrhynchos) ", 2, 2017
+        connection, "American Crow (Corvus brachyrhynchos) ", 1, 2017
     )
 
     if results is not None:
