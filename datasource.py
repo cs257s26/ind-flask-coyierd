@@ -20,9 +20,9 @@ def connect():
     """
     try:
         connection = ps.connect(
-            database=config.database,
-            user=config.user,
-            password=config.password,
+            database="coyierd",
+            user="coyierd",
+            password="plant222heart",
             host="localhost",
         )
     except Exception as e:
