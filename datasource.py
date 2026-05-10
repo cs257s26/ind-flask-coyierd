@@ -53,7 +53,7 @@ def get_sightings_at_stop_for_year(connection, bird, stop, year) -> list:
         return None
 
 
-def get_most_popular_stop_for_year(connection, year) -> list:
+def get_all_bird_sightings_for_year(connection, bird, year) -> list:
     """Returns the amount of birds at a given stop at a given year.
 
     Args:
@@ -66,9 +66,9 @@ def get_most_popular_stop_for_year(connection, year) -> list:
     try:
         cursor = connection.cursor()
 
-        query = 'SELECT TOP FROM "%s" ORDER BY stop_1 + stop_2 + stop_3 + stop_4 + stop_5 + stop_6 + stop_7 + stop_8 + stop_9 + stop_10 + stop_11 + stop_12 + stop_13 + stop_14 + stop_15 + stop_16 + stop_17;'
+        query = 'SELECT(stop_1 + stop_2 + stop_3 + stop_4 + stop_5 + stop_6 + stop_7 + stop_8 + stop_9 + stop_10 + stop_11 + stop_12 + stop_13 + stop_14 + stop_15 + stop_16 + stop_17) FROM "%s" WNERE bird_name=%s'
         cursor.execute(query, (year))
-        return [cursor.fetchall()[0][stop]]
+        return cursor.fetchall()[0][stop]
 
     except Exception as e:
         print("Something went wrong when executing the query: ", e)
@@ -112,3 +112,8 @@ def main():
 
 
 main()
+
+
+# SELECT column_name FROM information_schema.columns
+# ORDER BY SUM(column_name) DESC
+# LIMIT 1
