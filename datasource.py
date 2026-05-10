@@ -68,7 +68,7 @@ def get_all_bird_sightings_for_year(connection, bird, year) -> list:
 
         query = 'SELECT COALESCE(stop_1, 0) + COALESCE(stop_2, 0) + COALESCE(stop_3, 0) + COALESCE(stop_4, 0) + COALESCE(stop_5, 0) + COALESCE(stop_6, 0) + COALESCE(stop_7, 0) + COALESCE(stop_8, 0) + COALESCE(stop_9, 0) + COALESCE(stop_10, 0) + COALESCE(stop_11, 0) + COALESCE(stop_12, 0) + COALESCE(stop_13, 0) + COALESCE(stop_14, 0) + COALESCE(stop_15, 0) + COALESCE(stop_16, 0) + COALESCE(stop_17, 0) AS total_sightings FROM "%s" WHERE bird_name=%s;'
         cursor.execute(query, (year, bird))
-        return cursor.fetchall()
+        return cursor.fetchall()[0]
 
     except Exception as e:
         print("Something went wrong when executing the query: ", e)
@@ -85,7 +85,6 @@ def main():
     )
 
     if results is not None:
-        print(results, "***")
         print("Query results: ")
         for item in results:
             print(item)
@@ -103,8 +102,6 @@ def main():
         connection, "American Crow (Corvus brachyrhynchos) ", 2017
     )
 
-    # print(results)
-    # print("*****")
     if results is not None:
         print(results, "***")
         print("Query results: ")
@@ -112,7 +109,7 @@ def main():
             print(item)
 
     # # Disconnect from database
-    # connection.close()
+    connection.close()
 
 
 main()
