@@ -78,6 +78,7 @@ BEGIN
                 stop_17 INT
             )',
             c::text
+    );
     END LOOP;
 END
 $$
