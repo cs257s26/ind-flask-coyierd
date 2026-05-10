@@ -31,7 +31,7 @@ def connect():
     return connection
 
 
-def get_sightings_at_stop_for_year(connection, bird, stop, year) -> list:
+def get_sightings_at_stop_for_year(connection, bird, stop, year) -> int:
     """Returns the amount of birds at a given stop at a given year.
 
     Args:
@@ -48,7 +48,7 @@ def get_sightings_at_stop_for_year(connection, bird, stop, year) -> list:
         SELECT stop_var
         FROM year
         WHERE bird_name=bird;"""
-        cursor.execute(query, (stop_var,), (year,), (bird,))
+        cursor.execute(query, (stop_var, year, bird))
         return cursor.fetchall()
 
     except Exception as e:
