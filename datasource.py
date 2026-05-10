@@ -93,5 +93,22 @@ def main():
     # Disconnect from database
     connection.close()
 
+    ## Again, for second query
+
+    # Connect to the database
+    connection = connect()
+
+    # Execute a simple query: how many earthquakes above the specified magnitude are there in the data?
+    results = get_most_popular_stop_for_year(connection, 2017)
+
+    if results is not None:
+        print(results, "***")
+        print("Query results: ")
+        for item in results:
+            print(item)
+
+    # Disconnect from database
+    connection.close()
+
 
 main()
