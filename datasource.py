@@ -103,6 +103,7 @@ def main():
         connection, "American Crow (Corvus brachyrhynchos) ", 2017
     )
 
+    print(results)
     if results is not None:
         print(results, "***")
         print("Query results: ")
