@@ -1,6 +1,6 @@
-FOR i in 2020..2025 LOOP
-    DROP TABLE IF EXISTS i;
-    CREATE TABLE i (
+FOR a IN 2020..2025 LOOP
+    DROP TABLE IF EXISTS a;
+    CREATE TABLE a (
     bird_name text,
     stop_1 numeric,
     stop_2 numeric,
@@ -20,12 +20,12 @@ FOR i in 2020..2025 LOOP
     stop_16 numeric,
     stop_17 numeric
     );
-END LOOP
+END LOOP;
 
 
-FOR i in 2008..2018 LOOP
-    DROP TABLE IF EXISTS i;
-    CREATE TABLE i (
+FOR b in 2008..2018 LOOP
+    DROP TABLE IF EXISTS b;
+    CREATE TABLE b (
     bird_name text,
     stop_1 numeric,
     stop_2 numeric,
@@ -45,12 +45,12 @@ FOR i in 2008..2018 LOOP
     stop_16 numeric,
     stop_17 numeric
     );
-END LOOP
+END LOOP;
 
 
-FOR i in 2000..2004 LOOP
-    DROP TABLE IF EXISTS i;
-    CREATE TABLE i (
+FOR c in 2000..2004 LOOP
+    DROP TABLE IF EXISTS c;
+    CREATE TABLE c (
     bird_name text,
     stop_1 numeric,
     stop_2 numeric,
@@ -70,4 +70,4 @@ FOR i in 2000..2004 LOOP
     stop_16 numeric,
     stop_17 numeric
     );
-END LOOP
+END LOOP;
