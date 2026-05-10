@@ -1,77 +1,78 @@
 DO $$
 DECLARE
-    i int;
-    table_name text;
+    a INT;
+    b INT;
+    c INT;
 BEGIN
     FOR a IN 2020..2025 LOOP
-        DROP TABLE IF EXISTS a;
-        CREATE TABLE a (
+        DROP TABLE IF EXISTS a::TEXT;
+        CREATE TABLE a::TEXT (
         bird_name text,
-        stop_1 numeric,
-        stop_2 numeric,
-        stop_3 numeric,
-        stop_4 numeric,
-        stop_5 numeric,
-        stop_6 numeric,
-        stop_7 numeric,
-        stop_8 numeric,
-        stop_9 numeric,
-        stop_10 numeric,
-        stop_11 numeric,
-        stop_12 numeric,
-        stop_13 numeric,
-        stop_14 numeric,
-        stop_15 numeric,
-        stop_16 numeric,
-        stop_17 numeric
+        stop_1 INT,
+        stop_2 INT,
+        stop_3 INT,
+        stop_4 INT,
+        stop_5 INT,
+        stop_6 INT,
+        stop_7 INT,
+        stop_8 INT,
+        stop_9 INT,
+        stop_10 INT,
+        stop_11 INT,
+        stop_12 INT,
+        stop_13 INT,
+        stop_14 INT,
+        stop_15 INT,
+        stop_16 INT,
+        stop_17 INT
         );
     END LOOP;
 
-    FOR a IN 2008..2018 LOOP
-        DROP TABLE IF EXISTS a;
-        CREATE TABLE a (
+    FOR b IN 2008..2018 LOOP
+        DROP TABLE IF EXISTS b::TEXT;
+        CREATE TABLE b::TEXT (
         bird_name text,
-        stop_1 numeric,
-        stop_2 numeric,
-        stop_3 numeric,
-        stop_4 numeric,
-        stop_5 numeric,
-        stop_6 numeric,
-        stop_7 numeric,
-        stop_8 numeric,
-        stop_9 numeric,
-        stop_10 numeric,
-        stop_11 numeric,
-        stop_12 numeric,
-        stop_13 numeric,
-        stop_14 numeric,
-        stop_15 numeric,
-        stop_16 numeric,
-        stop_17 numeric
+        stop_1 INT,
+        stop_2 INT,
+        stop_3 INT,
+        stop_4 INT,
+        stop_5 INT,
+        stop_6 INT,
+        stop_7 INT,
+        stop_8 INT,
+        stop_9 INT,
+        stop_10 INT,
+        stop_11 INT,
+        stop_12 INT,
+        stop_13 INT,
+        stop_14 INT,
+        stop_15 INT,
+        stop_16 INT,
+        stop_17 INT
         );
     END LOOP;
 
-    FOR a IN 2000..2004 LOOP
-        DROP TABLE IF EXISTS a;
-        CREATE TABLE a (
+    FOR c IN 2000..2004 LOOP
+        DROP TABLE IF EXISTS c::TEXT;
+        CREATE TABLE c::TEXT (
         bird_name text,
-        stop_1 numeric,
-        stop_2 numeric,
-        stop_3 numeric,
-        stop_4 numeric,
-        stop_5 numeric,
-        stop_6 numeric,
-        stop_7 numeric,
-        stop_8 numeric,
-        stop_9 numeric,
-        stop_10 numeric,
-        stop_11 numeric,
-        stop_12 numeric,
-        stop_13 numeric,
-        stop_14 numeric,
-        stop_15 numeric,
-        stop_16 numeric,
-        stop_17 numeric
+        stop_1 INT,
+        stop_2 INT,
+        stop_3 INT,
+        stop_4 INT,
+        stop_5 INT,
+        stop_6 INT,
+        stop_7 INT,
+        stop_8 INT,
+        stop_9 INT,
+        stop_10 INT,
+        stop_11 INT,
+        stop_12 INT,
+        stop_13 INT,
+        stop_14 INT,
+        stop_15 INT,
+        stop_16 INT,
+        stop_17 INT
         );
     END LOOP;
 END
