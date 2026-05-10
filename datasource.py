@@ -103,13 +103,13 @@ def main():
         connection, "American Crow (Corvus brachyrhynchos) ", 2017
     )
 
-    print(results)
-    print("*****")
-    # if results is not None:
-    #     print(results, "***")
-    #     print("Query results: ")
-    #     for item in results:
-    #         print(item)
+    # print(results)
+    # print("*****")
+    if results is not None:
+        print(results, "***")
+        print("Query results: ")
+        for item in results:
+            print(item)
 
     # # Disconnect from database
     # connection.close()
