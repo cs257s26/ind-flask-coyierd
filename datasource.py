@@ -99,7 +99,9 @@ def main():
     connection = connect()
 
     # Execute a simple query: how many earthquakes above the specified magnitude are there in the data?
-    results = get_most_popular_stop_for_year(connection, 2017)
+    results = get_all_bird_sightings_for_year(
+        connection, "American Crow (Corvus brachyrhynchos) ", 2017
+    )
 
     if results is not None:
         print(results, "***")
