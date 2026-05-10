@@ -46,10 +46,7 @@ def get_sightings_at_stop_for_year(connection, bird, stop, year) -> list:
 
         query = 'SELECT * FROM "%s" WHERE bird_name=%s;'
         cursor.execute(query, (year, bird))
-        print(len(cursor.fetchall()[0]), "******")
-        print(type(cursor.fetchall()[0]), "***")
-        print(type(cursor.fetchall()), "((")
-        return cursor.fetchall()[0][0]
+        return cursor.fetchall()[0][stop]
 
     except Exception as e:
         print("Something went wrong when executing the query: ", e)
