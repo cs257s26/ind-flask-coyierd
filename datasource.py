@@ -31,8 +31,8 @@ def connect():
     return connection
 
 
-def get_max_temp_over_threshold(connection, temp: float) -> list:
-    """Retrieves all dates (and all the weather information associated with those dates) where the high temperature was above a specified threshold.
+def get_sightings_at_stop_for_year(connection, bird, stop, year) -> list:
+    """Returns the amount of birds at a given stop at a given year.
 
     Args:
         connection (psycopg2.connection) - the connection to the database
@@ -43,7 +43,7 @@ def get_max_temp_over_threshold(connection, temp: float) -> list:
     """
     try:
         cursor = connection.cursor()
-        query = 'SELECT COUNT(stop_1) FROM "2000";'
+        query = "SELECT stop_1 FROM year WHERE bird_name=bird;"
         cursor.execute(query, (temp,))
         return cursor.fetchall()
 
@@ -57,7 +57,9 @@ def main():
     connection = connect()
 
     # Execute a simple query: how many earthquakes above the specified magnitude are there in the data?
-    results = get_max_temp_over_threshold(connection, 50)
+    results = get_sightings_at_stop_for_year(
+        connection, "American Crow (Corvus brachyrhynchos) ", 1, 2017
+    )
 
     if results is not None:
         print("Query results: ")
