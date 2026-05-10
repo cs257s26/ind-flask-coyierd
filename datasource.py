@@ -66,9 +66,9 @@ def get_all_bird_sightings_for_year(connection, bird, year) -> list:
     try:
         cursor = connection.cursor()
 
-        query = 'SELECT(stop_1 + stop_2 + stop_3 + stop_4 + stop_5 + stop_6 + stop_7 + stop_8 + stop_9 + stop_10 + stop_11 + stop_12 + stop_13 + stop_14 + stop_15 + stop_16 + stop_17) FROM "%s" WNERE bird_name=%s'
+        query = 'SELECT(stop_1 + stop_2 + stop_3 + stop_4 + stop_5 + stop_6 + stop_7 + stop_8 + stop_9 + stop_10 + stop_11 + stop_12 + stop_13 + stop_14 + stop_15 + stop_16 + stop_17) FROM "%s" WHERE bird_name=%s'
         cursor.execute(query, (year))
-        return [cursor.fetchall()[0][0]]
+        return cursor.fetchall()
 
     except Exception as e:
         print("Something went wrong when executing the query: ", e)
@@ -93,7 +93,7 @@ def main():
     # Disconnect from database
     connection.close()
 
-    ## Again, for second query
+    ## Again, for second psql query
 
     # Connect to the database
     connection = connect()
@@ -120,3 +120,6 @@ main()
 # SELECT column_name FROM information_schema.columns
 # ORDER BY SUM(column_name) DESC
 # LIMIT 1
+
+
+# SELECT (stop_1 + stop_2 + stop_3 + stop_4 + stop_5 + stop_6 + stop_7 + stop_8 + stop_9 + stop_10 + stop_11 + stop_12 + stop_13 + stop_14 + stop_15 + stop_16 + stop_17) FROM "2017" WHERE bird_name='American Crow (Corvus brachyrhynchos) ';
