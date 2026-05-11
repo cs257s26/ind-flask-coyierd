@@ -233,3 +233,7 @@ and so on.
 
 
 I used the information about separating the sql command into EXECUTE blocks in my submission. I had already tried using the ::text command.
+
+
+
+I also searched up the COALESCE command to factor in null values when summing the sightings across stops for a single year in the second sql query.

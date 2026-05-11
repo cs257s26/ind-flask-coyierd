@@ -84,13 +84,7 @@ def main():
         for item in results:
             print(item)
 
-    # Disconnect from database
-    connection.close()
-
-    ## Again, for second psql query
-
-    # Connect to the database
-    connection = connect()
+    # And for the second psql query
 
     # Execute a simple query: how many earthquakes above the specified magnitude are there in the data?
     results = get_all_bird_sightings_for_year(
