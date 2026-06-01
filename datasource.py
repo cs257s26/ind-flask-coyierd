@@ -1,6 +1,6 @@
 import psycopg2 as ps
 
-import psqlConfig as config
+# import psqlConfig as config
 
 
 def connect():
@@ -47,7 +47,7 @@ def get_sightings_at_stop_for_year(connection, bird: str, stop: int, year: int) 
         return None
 
 
-def get_all_bird_sightings_for_year(connection, bird: int, year: str) -> list:
+def get_all_bird_sightings_for_year(connection, bird: str, year: int) -> list:
     """Returns the amount of bird sightings for a given year across all stops.
 
     Args:
