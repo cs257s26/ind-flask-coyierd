@@ -16,9 +16,9 @@ def year_count(bird, year):
     )
 
 
-@app.route("/year_stop_count/<bird>/<year>/<stop>")
+@app.route("/popular_stop/<year>")
 def popular_stop(year):
-    """Routes a bird, stop, and year to finding the sightings for a bird at a stop from a certain year"""
+    """Routes a year to finding the most popular stop (most birds seen at one stop) that year"""
     year = int(year)
     return (
         "The most birds were seen at stop "
@@ -29,4 +29,4 @@ def popular_stop(year):
     )
 
 
-app.run(port=845, host="0.0.0.0")
+app.run(host="0.0.0.0")
