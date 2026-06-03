@@ -38,7 +38,7 @@ def get_sightings_at_stop_for_year(connection, bird: str, stop: int, year: int) 
     try:
         cursor = connection.cursor()
 
-        query = 'SELECT * FROM "%s" WHERE bird_name=%s;'
+        query = 'SELECT * FROM "year_%s" WHERE bird_name=%s;'
         cursor.execute(query, (year, bird))
         return [cursor.fetchall()[0][stop]]
 
@@ -61,7 +61,7 @@ def get_all_bird_sightings_for_year(connection, bird: str, year: int) -> list:
     try:
         cursor = connection.cursor()
 
-        query = 'SELECT COALESCE(stop_1, 0) + COALESCE(stop_2, 0) + COALESCE(stop_3, 0) + COALESCE(stop_4, 0) + COALESCE(stop_5, 0) + COALESCE(stop_6, 0) + COALESCE(stop_7, 0) + COALESCE(stop_8, 0) + COALESCE(stop_9, 0) + COALESCE(stop_10, 0) + COALESCE(stop_11, 0) + COALESCE(stop_12, 0) + COALESCE(stop_13, 0) + COALESCE(stop_14, 0) + COALESCE(stop_15, 0) + COALESCE(stop_16, 0) + COALESCE(stop_17, 0) AS total_sightings FROM "%s" WHERE bird_name=%s;'
+        query = 'SELECT COALESCE(stop_1, 0) + COALESCE(stop_2, 0) + COALESCE(stop_3, 0) + COALESCE(stop_4, 0) + COALESCE(stop_5, 0) + COALESCE(stop_6, 0) + COALESCE(stop_7, 0) + COALESCE(stop_8, 0) + COALESCE(stop_9, 0) + COALESCE(stop_10, 0) + COALESCE(stop_11, 0) + COALESCE(stop_12, 0) + COALESCE(stop_13, 0) + COALESCE(stop_14, 0) + COALESCE(stop_15, 0) + COALESCE(stop_16, 0) + COALESCE(stop_17, 0) AS total_sightings FROM "year_%s" WHERE bird_name=%s;'
         cursor.execute(query, (year, bird))
         return cursor.fetchall()[0]
 

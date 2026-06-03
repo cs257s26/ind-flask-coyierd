@@ -17,12 +17,15 @@ Copy commands (one for each table):
 \copy "2000" FROM 'data/csv/2000.csv' DELIMITER ',' CSV
 \copy "2001" FROM 'data/csv/2001.csv' DELIMITER ',' CSV
 \copy "2002" FROM 'data/csv/2002.csv' DELIMITER ',' CSV
+\copy "2003" FROM 'data/csv/2003.csv' DELIMITER ',' CSV
 \copy "2004" FROM 'data/csv/2004.csv' DELIMITER ',' CSV
 \copy "2008" FROM 'data/csv/2008.csv' DELIMITER ',' CSV
 \copy "2010" FROM 'data/csv/2010.csv' DELIMITER ',' CSV
+\copy "2011" FROM 'data/csv/2011.csv' DELIMITER ',' CSV
 \copy "2012" FROM 'data/csv/2012.csv' DELIMITER ',' CSV
 \copy "2013" FROM 'data/csv/2013.csv' DELIMITER ',' CSV
 \copy "2014" FROM 'data/csv/2014.csv' DELIMITER ',' CSV
+\copy "2015" FROM 'data/csv/2015.csv' DELIMITER ',' CSV
 \copy "2016" FROM 'data/csv/2016.csv' DELIMITER ',' CSV
 \copy "2017" FROM 'data/csv/2017.csv' DELIMITER ',' CSV
 \copy "2018" FROM 'data/csv/2018.csv' DELIMITER ',' CSV
@@ -31,7 +34,7 @@ Copy commands (one for each table):
 \copy "2022" FROM 'data/csv/2022.csv' DELIMITER ',' CSV
 \copy "2023" FROM 'data/csv/2023.csv' DELIMITER ',' CSV
 \copy "2024" FROM 'data/csv/2024.csv' DELIMITER ',' CSV
-\copy "2025" FROM 'data/csv/2024.csv' DELIMITER ',' CSV
+\copy "2025" FROM 'data/csv/2025.csv' DELIMITER ',' CSV
 
 ### Questions
 
