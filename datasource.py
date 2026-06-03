@@ -75,9 +75,7 @@ def main():
     connection = connect()
 
     # Execute a simple query: how many earthquakes above the specified magnitude are there in the data?
-    results = get_sightings_at_stop_for_year(
-        connection, "American Crow (Corvus brachyrhynchos) ", 1, 2017
-    )
+    results = get_sightings_at_stop_for_year(connection, "American Crow", 1, 2017)
 
     if results is not None:
         print("Query results: ")
@@ -87,9 +85,7 @@ def main():
     # And for the second psql query
 
     # Execute a simple query: how many earthquakes above the specified magnitude are there in the data?
-    results = get_all_bird_sightings_for_year(
-        connection, "American Crow (Corvus brachyrhynchos) ", 2015
-    )
+    results = get_all_bird_sightings_for_year(connection, "American Crow", 2015)
 
     if results is not None:
         print("Query results: ")
