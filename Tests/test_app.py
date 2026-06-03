@@ -6,10 +6,10 @@ from app import popular_stop, year_count
 class TestApp(unittest.TestCase):
     def test_year_count(self):
         """Test that year count works correctly for existing bird"""
-        year_count_2018 = year_count("American Goldfinch (Carduelis tristis) ", 2018)
+        year_count_2018 = year_count("American Goldfinch", 2018)
         self.assertEqual(
             year_count_2018,
-            "There were 11 sightings of the American Goldfinch (Carduelis tristis)  in 2018.",
+            "There were 11 sightings of the American Goldfinch in 2018.",
         )
 
     def test_year_count_no_bird(self):
@@ -22,10 +22,10 @@ class TestApp(unittest.TestCase):
 
     def test_year_count_no_sightings(self):
         """Test that year count works correctly for a bird with no sightings"""
-        year_count_zero = year_count("Brown Thrasher (Toxostoma rufum)", 2004)
+        year_count_zero = year_count("Brown Thrasher", 2004)
         self.assertEqual(
             year_count_zero,
-            "There were 0 sightings of the Brown Thrasher (Toxostoma rufum) in 2004.",
+            "There were 0 sightings of the Brown Thrasher in 2004.",
         )
 
     def test_popular_stop(self):
