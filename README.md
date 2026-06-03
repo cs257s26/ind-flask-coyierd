@@ -9,7 +9,7 @@ Two features in the flask app:
 
 I was running python3 app.py to start the app (need to add port in app.run(host="0.0.0.0", port=####) as needed)
 Tests were: python3 -m unittest Tests/test_app.py
-
+-> Note that command_line.py, therefore app.py, and therefore test_app.py all rely on the old csv schema, which has been edited. So these tests are no longer supported. Editing command_line.py, app.py or test_app.py was not mentioned in the assignment at all, so I treated this as outside the scope of the assignment.
 
 ## Individual DB
 
@@ -45,10 +45,8 @@ When cleaning the data, I removed columns/rows that were not either the bird's n
 #### Explain how each of your queries represents a user story. What does the query do, and how does this match all or part of a user story?
 
 The get_all_bird_sightings_for_year function queries the database for all bird sightings for a specific year. It clearly fits with the following user story, since it provides the exact information requested.
-
-As an endangered species researcher, I want to study population changes over time, so given a bird and year I want to see how many sightings were recorded of that bird that year at the Carleton Arb.
+- User story: As an endangered species researcher, I want to study population changes over time, so given a bird and year I want to see how many sightings were recorded of that bird that year at the Carleton Arb.
 
 
 The get_sightings_at_stop_for_year function queries the database for the amount of bird sightings for a specific year at a specific stops. It provides the information exactly to support this user story:
-
-As a worker in the Arb, I want to know how many birds were sighted at a specific stop location for a given year so that I can better organize plant life at that location to support the bird population.
+- User story: As a worker in the Arb, I want to know how many birds were sighted at a specific stop location for a given year so that I can better organize plant life at that location to support the bird population.
